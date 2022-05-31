@@ -123,6 +123,12 @@ namespace GameXO
             //присваиваем значение 
             button.Content = mPlayer1Move ? "X" : "O";
 
+            //изменяем цвет второго игрока на красный
+            if (!mPlayer1Move)
+            {
+                button.Foreground = Brushes.Red;
+            }
+
             //переключить игрока
             if (mPlayer1Move)
                 mPlayer1Move = false;
