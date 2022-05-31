@@ -20,7 +20,7 @@
         </Style>
     </Window.Resources>
     
-    <Grid>
+    <Grid x:Name="GridCells">
         
         <!--сетка-->
         <Grid.ColumnDefinitions>
@@ -37,47 +37,56 @@
 
         <!--1 ряд-->
         <Button x:Name="btn0_0"
+                Click="btn_Click"
                 Grid.Column="0"
                 Grid.Row="0"
-                Content="X"/>
+                Content="O"/>
         
         <Button x:Name="btn1_0"
+                Click="btn_Click"
                 Grid.Column="1"
                 Grid.Row="0"
-                Content="X"/>
+                />
         <Button x:Name="btn2_0"
+                Click="btn_Click"
                 Grid.Column="2"
                 Grid.Row="0"
-                Content="X"/>
+                />
 
         <!--2 ряд-->
         <Button x:Name="btn0_1"
+                Click="btn_Click"
                 Grid.Column="0"
                 Grid.Row="1"
                 />
 
         <Button x:Name="btn1_1"
+                Click="btn_Click"
                 Grid.Column="1"
                 Grid.Row="1"
                 />
         <Button x:Name="btn2_1"
+                Click="btn_Click"
                 Grid.Column="2"
                 Grid.Row="1"
-                />
+                Content="O"/>
 
         <!--3 ряд-->
         <Button x:Name="btn0_2"
+                Click="btn_Click"
                 Grid.Column="0"
-                Grid.Row="3"
+                Grid.Row="2"
                 />
 
         <Button x:Name="btn1_2"
+                Click="btn_Click"
                 Grid.Column="1"
-                Grid.Row="3"
+                Grid.Row="2"
                 />
         <Button x:Name="btn2_2"
+                Click="btn_Click"
                 Grid.Column="2"
-                Grid.Row="3"
+                Grid.Row="2"
                 />
     </Grid>
     
