@@ -134,9 +134,60 @@ namespace GameXO
                 mPlayer1Move = false;
             else
                 mPlayer1Move = true;
+
+            CheckWin();
+            
+        }
+
+        /// <summary>
+        /// проверка, кто победил
+        /// </summary>
+        private void CheckWin()
+        {
+            // проверка с 0 по 2 индекс (верхние 3 клетки) 
+            if (mResults[0] != MarkType.Free && (mResults[0] & mResults[1] & mResults[2]) == mResults[0])
+            {
+                // игра окончена
+                mGameEnded = true;
+                // выделяем фон зеленым
+                btn0_0.Background = btn1_0.Background = btn2_0.Background = Brushes.DarkGreen; 
                 
-            
-            
+            }
+            else if (mResults[3] != MarkType.Free && (mResults[3] & mResults[4] & mResults[5]) == mResults[3])
+            {
+                mGameEnded = true;
+                btn0_1.Background = btn1_1.Background = btn2_1.Background = Brushes.DarkGreen;
+            }
+            else if (mResults[6] != MarkType.Free && (mResults[6] & mResults[7] & mResults[8]) == mResults[6])
+            {
+                mGameEnded = true;
+                btn0_2.Background = btn1_2.Background = btn2_2.Background = Brushes.DarkGreen;
+            }
+            else if (mResults[0] != MarkType.Free && (mResults[0] & mResults[3] & mResults[6]) == mResults[0])
+            {
+                mGameEnded = true;
+                btn0_0.Background = btn0_1.Background = btn0_2.Background = Brushes.DarkGreen;
+            }
+            else if (mResults[1] != MarkType.Free && (mResults[1] & mResults[4] & mResults[7]) == mResults[1])
+            {
+                mGameEnded = true;
+                btn0_1.Background = btn1_1.Background = btn2_1.Background = Brushes.DarkGreen;
+            }
+            else if (mResults[2] != MarkType.Free && (mResults[2] & mResults[5] & mResults[8]) == mResults[2])
+            {
+                mGameEnded = true;
+                btn0_2.Background = btn1_2.Background = btn2_2.Background = Brushes.DarkGreen;
+            }
+            else if (mResults[0] != MarkType.Free && (mResults[0] & mResults[4] & mResults[8]) == mResults[0])
+            {
+                mGameEnded = true;
+                btn0_0.Background = btn1_1.Background = btn2_2.Background = Brushes.DarkGreen;
+            }
+            else if (mResults[2] != MarkType.Free && (mResults[2] & mResults[4] & mResults[6]) == mResults[2])
+            {
+                mGameEnded = true;
+                btn0_2.Background = btn1_1.Background = btn2_0.Background = Brushes.DarkGreen;
+            }
         }
     }
 }
