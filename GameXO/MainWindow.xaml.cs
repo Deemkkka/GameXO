@@ -93,8 +93,8 @@ namespace GameXO
             }
 
             // передать отправителю кнопки
-            var button = (Button)sender;
-            
+            var button = sender as Button;  // = (Button)sender
+
             //найти позиции кнопки в массиве
             var column = Grid.GetColumn(button);
             var row = Grid.GetRow(button);
@@ -122,6 +122,14 @@ namespace GameXO
 
             //присваиваем значение 
             button.Content = mPlayer1Move ? "X" : "O";
+
+            //переключить игрока
+            if (mPlayer1Move)
+                mPlayer1Move = false;
+            else
+                mPlayer1Move = true;
+                
+            
             
         }
     }

@@ -16,7 +16,9 @@
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderThickness" Value="0.5"/>
             <Setter Property="FontSize" Value="65"/>
-            
+            <Setter Property="BorderBrush" Value="OrangeRed"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+
         </Style>
     </Window.Resources>
     
