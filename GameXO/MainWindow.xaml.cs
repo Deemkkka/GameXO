@@ -171,12 +171,12 @@ namespace GameXO
             else if (mResults[1] != MarkType.Free && (mResults[1] & mResults[4] & mResults[7]) == mResults[1])
             {
                 mGameEnded = true;
-                btn0_1.Background = btn1_1.Background = btn2_1.Background = Brushes.DarkGreen;
+                btn1_0.Background = btn1_1.Background = btn1_2.Background = Brushes.DarkGreen;
             }
             else if (mResults[2] != MarkType.Free && (mResults[2] & mResults[5] & mResults[8]) == mResults[2])
             {
                 mGameEnded = true;
-                btn0_2.Background = btn1_2.Background = btn2_2.Background = Brushes.DarkGreen;
+                btn2_0.Background = btn2_1.Background = btn2_2.Background = Brushes.DarkGreen;
             }
             else if (mResults[0] != MarkType.Free && (mResults[0] & mResults[4] & mResults[8]) == mResults[0])
             {
@@ -195,8 +195,8 @@ namespace GameXO
 
                 GridCells.Children.Cast<Button>().ToList().ForEach(button =>
                 {
-                    button.Background = Brushes.AliceBlue;
-                })
+                    button.Background = Brushes.BlueViolet;
+                });
             }
         }
     }
