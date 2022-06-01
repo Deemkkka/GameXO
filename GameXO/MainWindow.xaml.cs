@@ -188,6 +188,16 @@ namespace GameXO
                 mGameEnded = true;
                 btn0_2.Background = btn1_1.Background = btn2_0.Background = Brushes.DarkGreen;
             }
+            //если нет победителя и заполнены все клетки
+            else if(!mResults.Any(r => r == MarkType.Free))
+            {
+                mGameEnded=true;
+
+                GridCells.Children.Cast<Button>().ToList().ForEach(button =>
+                {
+                    button.Background = Brushes.AliceBlue;
+                })
+            }
         }
     }
 }
